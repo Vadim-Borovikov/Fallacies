@@ -1,0 +1,24 @@
+﻿@using Model.Git
+@model IEnumerable<Model.Git.Fallacy>
+
+@{
+    ViewBag.Title = "fallacymania @ Git";
+}
+
+<br />
+<button onclick="location.href='@Url.Action("FetchDataFromGit")'">Fetch data from Git</button>
+<hr />
+<table cols="6">
+    <tr>
+        <th />
+        <th />
+        <th>Name</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Пример(ы)</th>
+    </tr>
+    @foreach (Fallacy fallacy in Model)
+    {
+        @Html.Partial("_GitFallacyPartial", fallacy)
+    }
+</table>

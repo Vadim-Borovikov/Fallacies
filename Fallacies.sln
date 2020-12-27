@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fallacies", "Fallacies\Fallacies.csproj", "{D3E45A7C-D4AF-4290-BA94-53A521C01377}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fallacies", "Fallacies\Fallacies.csproj", "{0F01D1CF-D412-48BE-9F21-C11FD3B95923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "DataBase\Model.csproj", "{868333E9-EB4D-4888-9DF5-6D322D91B2E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D3E45A7C-D4AF-4290-BA94-53A521C01377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3E45A7C-D4AF-4290-BA94-53A521C01377}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3E45A7C-D4AF-4290-BA94-53A521C01377}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3E45A7C-D4AF-4290-BA94-53A521C01377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F01D1CF-D412-48BE-9F21-C11FD3B95923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F01D1CF-D412-48BE-9F21-C11FD3B95923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F01D1CF-D412-48BE-9F21-C11FD3B95923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F01D1CF-D412-48BE-9F21-C11FD3B95923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{868333E9-EB4D-4888-9DF5-6D322D91B2E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{868333E9-EB4D-4888-9DF5-6D322D91B2E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{868333E9-EB4D-4888-9DF5-6D322D91B2E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{868333E9-EB4D-4888-9DF5-6D322D91B2E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
