@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Model.Slack
+namespace Fallacies.Data
 {
-    public class Fallacy
+    public class GitFallacy
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }

@@ -3,18 +3,18 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
-using Model.Git;
+using Fallacies.Data;
 
 namespace Fallacies.Controllers
 {
     internal class GitDataFetcher
     {
-        internal static List<Fallacy> FetchData()
+        internal static List<GitFallacy> FetchData()
         {
             using (var client = new WebClient())
             {
-                string[] descriptionRu = FetchTextFile(client, Config.DescriptionsRuUrl);
-                string[] descriptionEn = FetchTextFile(client, Config.DescriptionsEnUrl);
+                string[] descriptionRu = FetchTextFile(client, GitConfig.DescriptionsRuUrl);
+                string[] descriptionEn = FetchTextFile(client, GitConfig.DescriptionsEnUrl);
 
                 string[] files = GetBackgroungFiles(client).ToArray();
 
@@ -53,10 +53,10 @@ namespace Fallacies.Controllers
 
         private static IEnumerable<string> GetBackgroungFiles(WebClient client)
         {
-            string html = client.DownloadString(Config.BackgroungFilesPageUrl);
-            foreach (string match in GetMatches(html, Config.BackgroundFileNamePattern))
+            string html = client.DownloadString(GitConfig.BackgroungFilesPageUrl);
+            foreach (string match in GetMatches(html, GitConfig.BackgroundFileNamePattern))
             {
-                yield return $"{Config.BackgroungFilesUrl}/{match.Replace("\"", "")}";
+                yield return $"{GitConfig.BackgroungFilesUrl}/{match.Replace("\"", "")}";
             }
         }
 
@@ -65,20 +65,20 @@ namespace Fallacies.Controllers
             return Regex.Matches(input, pattern).Cast<Match>().Select(match => match.Value);
         }
 
-        private static IEnumerable<Fallacy> LoadFallacies(IReadOnlyList<string> descriptionRu,
+        private static IEnumerable<GitFallacy> LoadFallacies(IReadOnlyList<string> descriptionRu,
                                                           IReadOnlyList<string> descriptionEn,
                                                           IReadOnlyList<string> files)
         {
             int fallacies = descriptionRu.Count / 4;
             for (int i = 0; i < fallacies; ++i)
             {
-                yield return new Fallacy
+                yield return new GitFallacy
                 {
                     Id = i,
                     NameRu = descriptionRu[i*4],
                     NameEn = descriptionEn[i*4],
                     ImagePathBackground = files[i],
-                    ImagePathIcon = $"{Config.UrlPrefixRawContent}{descriptionRu[i*4 + 1]}",
+                    ImagePathIcon = $"{GitConfig.UrlPrefixRawContent}{descriptionRu[i*4 + 1]}",
                     Description = descriptionRu[i*4 + 2],
                     Examples = descriptionRu[i*4 + 3]
                 };

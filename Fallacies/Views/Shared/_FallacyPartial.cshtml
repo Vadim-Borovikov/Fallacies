@@ -1,0 +1,12 @@
+﻿@model Fallacies.Data.Fallacy
+
+<tr>
+    <td>@Model.GitId</td>
+    <td><p style="background-image: url(@Model.GitImagePathBackground)"><img src="@Model.GitImagePathIcon"></p></td>
+    <td><img src="@Model.SlackImage"></td>
+    <td>@Model.Name</td>
+    <td><code>@Model.Code</code></td>
+    <td>@Model.NameRu</td>
+    <td>@Model.Description</td>
+    <td>@Model.Examples</td>
+</tr>

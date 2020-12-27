@@ -1,6 +1,6 @@
-﻿namespace Model.Git
+﻿namespace Fallacies.Data
 {
-    public static class Config
+    public static class GitConfig
     {
         public static readonly string DescriptionsRuUrl = $"{UrlPrefixRawContent}fallacies-rus.txt";
         public static readonly string DescriptionsEnUrl = $"{UrlPrefixRawContent}fallacies-eng.txt";

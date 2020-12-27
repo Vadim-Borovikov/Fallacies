@@ -1,0 +1,26 @@
+﻿@using Fallacies.Data
+@model IEnumerable<Fallacy>
+
+@{
+    ViewBag.Title = "Aggregate fallacies";
+}
+<br />
+А ещё есть пара десятков специальных реакций с префиксом <code>fallacy_</code> про разные <a href="http://fallacymania.com/">псевдоаргументы</a>:
+<table cols="5">
+    <tr>
+        <th>Emoji</th>
+        <th>Код</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Пример(ы)</th>
+    </tr>
+    @foreach (Fallacy fallacy in Model)
+    {
+        if (string.IsNullOrWhiteSpace(fallacy.Code))
+        {
+            continue;
+        }
+
+        @Html.Partial("_FallacyEmojiPartial", fallacy)
+    }
+</table>

@@ -5,19 +5,19 @@ using Fallacies.Data;
 
 namespace Fallacies.Controllers
 {
-    public class GitFallaciesController : Controller
+    public class SlackFallaciesController : Controller
     {
         private readonly ApplicationDbContext _context = new ApplicationDbContext();
 
         // GET: GitFallacies
         public ActionResult Index()
         {
-            return View(_context.GitFallacies.ToList());
+            return View(_context.SlackFallacies.ToList());
         }
 
-        public ActionResult FetchDataFromGit()
+        public ActionResult FetchDataFromSlack()
         {
-            List<GitFallacy> fallacies = GitDataFetcher.FetchData();
+            List<SlackFallacy> fallacies = SlackDataFetcher.FetchData();
             SyncDbWith(fallacies);
 
             return RedirectToAction("Index");
@@ -32,10 +32,10 @@ namespace Fallacies.Controllers
             base.Dispose(disposing);
         }
 
-        private void SyncDbWith(IEnumerable<GitFallacy> fallacies)
+        private void SyncDbWith(IEnumerable<SlackFallacy> fallacies)
         {
-            _context.GitFallacies.RemoveRange(_context.GitFallacies);
-            _context.GitFallacies.AddRange(fallacies);
+            _context.SlackFallacies.RemoveRange(_context.SlackFallacies);
+            _context.SlackFallacies.AddRange(fallacies);
             _context.SaveChanges();
         }
     }

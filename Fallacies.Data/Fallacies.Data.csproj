@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{868333E9-EB4D-4888-9DF5-6D322D91B2E0}</ProjectGuid>
+    <ProjectGuid>{55CD04B3-3715-4532-B4EA-C5F954BBC7F7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Model</RootNamespace>
-    <AssemblyName>Model</AssemblyName>
+    <RootNamespace>Fallacies.Data</RootNamespace>
+    <AssemblyName>Fallacies.Data</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,11 +51,14 @@
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="DAL\DbInitializer.cs" />
-    <Compile Include="Git\Config.cs" />
-    <Compile Include="Git\Fallacy.cs" />
+    <Compile Include="LocalConfig.cs" />
+    <Compile Include="GitConfig.cs" />
+    <Compile Include="Fallacy.cs" />
+    <Compile Include="LocalFallacy.cs" />
+    <Compile Include="GitFallacy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Slack\Config.cs" />
-    <Compile Include="Slack\Fallacy.cs" />
+    <Compile Include="SlackConfig.cs" />
+    <Compile Include="SlackFallacy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

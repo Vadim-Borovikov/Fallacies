@@ -1,0 +1,23 @@
+﻿@using Fallacies.Data
+@model IEnumerable<LocalFallacy>
+
+@{
+    ViewBag.Title = "Your Logical Fallacyis @ Local";
+}
+
+<br />
+<button onclick="location.href='@Url.Action("FetchLocalData")'">Fetch local data</button>
+<hr />
+<table cols="4">
+    <tr>
+        <th>Name</th>
+        <th>Название</th>
+        <th>Synopsys</th>
+        <th>Desctription</th>
+        <th>Example</th>
+    </tr>
+    @foreach (LocalFallacy fallacy in Model)
+    {
+        @Html.Partial("_LocalFallacyPartial", fallacy)
+    }
+</table>

@@ -1,0 +1,17 @@
+﻿@model Fallacies.Data.Fallacy
+
+
+<tr>
+    <td>@{
+            string name = "";
+            if (!string.IsNullOrWhiteSpace(Model.Code))
+            {
+                name = Model.Code.Replace(":", "").Replace("_", "-");
+            }
+            string filePath = $"/sites/default/files/images/slack-emoji-{name}.png";
+        }<img src=@filePath style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>@Model.Code</code></td>
+    <td>@Model.NameRu</td>
+    <td>@Model.Description</td>
+    <td>@Model.Examples</td>
+</tr>

@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggregate fallacies - My ASP.NET Application</title>
+    <link href="/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+<link href="/Content/site.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/0364FF94-FB19-8E43-ADBC-482F98E87BEF/main.js" charset="UTF-8"></script><script src="/Scripts/modernizr-2.8.3.js"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/Home/Local">Your Logical Fallacyis @ Local</a></li>
+                    <li><a href="/Home/Slack">Fallacy Emoji @ Slack</a></li>
+                    <li><a href="/Home/Git">Fallacymania @ Git</a></li>
+                    <li><a href="/Home/Aggregate">Aggregate</a></li>
+                    <li><a href="/Home/Icons">Icons</a></li>
+                    <li><a href="/Home/Emoji">Emoji</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        
+
+<br />
+А ещё есть пара десятков специальных реакций с префиксом <code>fallacy_</code> про разные <a href="http://fallacymania.com/">псевдоаргументы</a>:
+<table cols="5">
+    <tr>
+        <th>Emoji</th>
+        <th>Код</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Пример(ы)</th>
+    </tr>
+
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-ad-hominem.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_ad_hominem:</code></td>
+    <td>Переход на личности</td>
+    <td>Обращать внимание на личные качества или характер оппонента для того, чтобы победить в споре.</td>
+    <td>&#171;Ты утверждаешь, что безбожники — порядочные люди. Но я знаю, что ты бросил жену с детьми&#187;.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-ambiguity.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_ambiguity:</code></td>
+    <td>Двусмысленность</td>
+    <td>Использовать слова и фразы, которые могут быть поняты неоднозначно, чтобы ввести оппонента в заблуждение.</td>
+    <td>&#171;Я сейчас делаю вам очень выгодное предложение!&#187;</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-anecdotal.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_anecdotal:</code></td>
+    <td>Случай из жизни</td>
+    <td>Использовать личный опыт или известный случай в качестве аргумента в споре, особенно для опровержения статистики.</td>
+    <td>&#171;Да что вы мне рассказываете о вреде курения?&#187; — спорил 15— летний Паша. &#171;Мой прадед курил по две пачки в день, и дожил до 97 лет&#187;. К сожалению, в 22 года у Паши диагностировали серьёзные проблемы с лёгкими.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-authority.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_authority:</code></td>
+    <td>Апелляция к авторитету</td>
+    <td>Ссылаться на мнение авторитетного лица или представителя власти вместо предоставления настоящего аргумента.</td>
+    <td>&#171;Не будет в следующем году кризиса! Сам министр экономики так сказал!&#187;</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-emotion.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_emotion:</code></td>
+    <td>Апелляция к эмоциям</td>
+    <td>Вызывать к эмоциям вместо предоставления логических доводов.</td>
+    <td>Ярослав ненавидел манную кашу, но мама заставляла её есть, называя сына бессовестным, ведь &#171;в мире столько детей, которые умирают от голода&#187;.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-nature.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_nature:</code></td>
+    <td>Апелляция к природе</td>
+    <td>Доказывать, что всё, что естественно — не безобразно, и более того — полезно, оправданно, неизбежно, правильно или идеально.</td>
+    <td>&#171;Хищники пожирают друг друга — таков закон природы. То же делают и люди в обществе. Таков закон природы&#187;.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-applause-lights.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_applause_lights:</code></td>
+    <td>Требование аплодисментов</td>
+    <td>Предоставлять лозунг, не несущий никакой информации, в качестве содержательного аргуманта.</td>
+    <td>&#171;Нам нужно соблюдать баланс рисков и возможностей ИИ&#187;.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-bandwagon.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_bandwagon:</code></td>
+    <td>Мнение масс (Все в одном вагоне)</td>
+    <td>Поддерживать что-либо лишь потому, что многие считают это верным, ведь &#171;большинство ошибаться не может&#187;.</td>
+    <td>&#171;Миллионы людей согласны с его позицией, значит он прав&#187;, — сказал Иван, защищая своего политического кумира.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-begging-question.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_begging_question:</code></td>
+    <td>Порочный круг</td>
+    <td>Наличие вывода среди причин.</td>
+    <td>&#171;Бог есть, потому что так написано в Библии. Библия истинна, потому что она Слово Божье&#187;.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-black-or-white.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_black_or_white:</code></td>
+    <td>Чёрное или белое (Ложная дилемма)</td>
+    <td>Предоставлять два альтернативных результата как единственно возможные. (Не стоит забывать, что на деле их существует гораздо больше.)</td>
+    <td>Чтобы окончательно подмять под себя город, мэр сказал горожанам: &#171;Или вы со мной, или вы против меня — на стороне моего врага&#187;.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-burden-of-proof.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_burden_of_proof:</code></td>
+    <td>Бремя доказательства</td>
+    <td>Говорить, что верность утверждения должен доказывать отрицающий, но не утверждающий. (А должно быть наоборот)</td>
+    <td>Коля: У меня дома живёт невидимое существо, исполняющее желания! Саша: Докажи. Коля: А докажи, что его нет! Саша: Эээм... ну как бы... Коля: Ага, не можешь! Вот ты и слился!</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-composition-division.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_composition_division:</code></td>
+    <td>Часть-целое</td>
+    <td>Неумело сравнивать истинность утверждения для целого и для его частей. &#171;Каждое зерно в куче почти ничего не весит. Следовательно, куча также почти ничего не весит&#187;.</td>
+    <td>Данил был смышлённым ребёнком, и знал, что всё вокруг состоит из невидимых глазу атомов. Он тоже состоял из атомов и, следовательно, считал себя невидимкой. К сожалению, он проиграл в прятки.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-false-cause.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_false_cause:</code></td>
+    <td>Ложная причина</td>
+    <td>Предполагать, что реальная или мнимая связь между вещами означает, что одно является причиной другого.</td>
+    <td>Из графиков роста температуры и снижения численности пиратов на протяжении последних нескольких столетий Максим делает вывод: пираты охлаждают мир, а глобальное потепление — лишь мистификация.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-genetic.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_genetic:</code></td>
+    <td>Генетическая логическая ошибка</td>
+    <td>Считать что-либо плохим или хорошим, опираясь на его происхождение.</td>
+    <td>&#171;Эта картошка точно хуже — посмотри на этикетку, её привезли из Америки&#187;.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-loaded-question.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_loaded_question:</code></td>
+    <td>Наводящий вопрос</td>
+    <td>Задавать вопрос, который подразумевает истинность некого утверждения, которое на самом деле ложное или спорное.</td>
+    <td>&#171;Как вы считаете, поможет ли снизить заболеваемость недавно опубликованное научное доказательство действенности гомеопатии?&#187;</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-middle-ground.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_middle_ground:</code></td>
+    <td>Золотая середина</td>
+    <td>Настаивать на том, что в споре &#171;худой мир лучше доброй войны&#187; и принимать компромиссную позицию за истину.</td>
+    <td>Катя: Прививки вызывают аутизм у детей! Маша: Это не так. Случай с аутизмом не был доказан. Коля: Давайте сойдёмся на том, что прививки могут вызывать &#171;немного&#187; аутизма.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-no-true-scotsman.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_no_true_scotsman:</code></td>
+    <td>Не настоящий шотландец</td>
+    <td>Аппелировать &#171;к чистоте&#187; в ответ на содержательную критику или указание ошибки.</td>
+    <td>&#171;Все шотландцы обожают хаггис&#187;. — &#171;Мой дядя шотландец, но он не любит хаггис!&#187; — &#171;Значит, он не настоящий шотландец!&#187;</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-personal-incredulity.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_personal_incredulity:</code></td>
+    <td>Аргумент к сложности/ невероятности</td>
+    <td>Считать информацию ошибочной из-за того, что она сложна для понимания (по причине личной некомпетентности в обсуждаемом вопросе).</td>
+    <td>Фома нарисовал на бумаге рыбу и человека, и с вызовом сказал Пете: &#171;Это бред, что человек произошёл от рыбы в процессе эволюции, пусть даже за миллионы лет!&#187;</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-slippery-slope.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_slippery_slope:</code></td>
+    <td>Скользкий путь</td>
+    <td>Утверждать, что если случится событие &#171;A&#187;, оно повлечёт за собой событие &#171;Z&#187; (не учитывая промежуточных), поэтому событие &#171;A&#187; ни в коем случае нельзя допустить.</td>
+    <td>Николай считает, что если мы разрешим гомосексуальным парам вступать в брак, следующее, с чем мы столкнёмся, будет заключение брака с собственными родителями, машинами и даже обезьянками.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-special-pleading.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_special_pleading:</code></td>
+    <td>Специальные требования</td>
+    <td>Внезапно менять правила игры, чтобы создать исключение из правил, и показать, что требования недопустимы.</td>
+    <td>Сергей требовал признать его экстрасенсом, но когда его способности стали проверять, они неожиданно испарились. &#171;Для того, чтобы увидеть мой дар, необходимо сначала в него поверить&#187;, — не моргнув, объяснил произошедшее Сергей.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-strawman.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_strawman:</code></td>
+    <td>Соломенное чучело</td>
+    <td>Перевирать доводы оппонента для того, чтобы было легче нападать.</td>
+    <td>Олег поддержал увеличение дотаций на образование и здавоохранение. Павел возмутился: &#171;Не думал, что ты ненавидишь свою страну настолько, что хочешь оставить её беззащитной, урезав расходы на армию&#187;.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-fallacy.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_fallacy:</code></td>
+    <td>Ошибка в ошибке</td>
+    <td>Настаивать на ошибочности всего высказывания только потому, что в одном из аргументов была допущена ошибка.</td>
+    <td>Катя: Необходимо питаться здоровой пищей, так как мой врач сообщил, что сейчас это очень популярно. Маша: Фастфуды более популярны и рекламируются на каждом углу, поэтому надо питаться гамбургерами.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-gambler.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_gambler:</code></td>
+    <td>Ошибка игрока</td>
+    <td>Связывать вероятность желаемого исхода с предыдущими исходами для статистически независимые явлений.</td>
+    <td>Монета упала орлом уже шестой раз подряд, так что Григорий точно знал, что теперь должна выпасть решка. Из-за подобных рассуждений в конце концов он проиграл все свои сбережения.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-texas-sharpshooter.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_texas_sharpshooter:</code></td>
+    <td>Ошибка меткого стрелка</td>
+    <td>Подбирать данные под свой аргумент или схему под допущение</td>
+    <td>Создатели энергетика ссылаются на следующее исследование: из пяти стран-лидеров по продаже их напитка, три входят в первую десятку самых здоровых стран на Земле. &#171;Наш энергетик полезен!&#187; — заключают они.</td>
+</tr>
+<tr>
+    <td><img src=/sites/default/files/images/slack-emoji-fallacy-tu-quoque.png style="width: 32px; position: relative; top: 6px"></td>
+    <td><code>:fallacy_tu_quoque:</code></td>
+    <td>А сам какой!?</td>
+    <td>Указывать на то, что оппонент сам действует вопреки аргументу.</td>
+    <td>Вася: Курение вредит здоровью, людям не следует курить. Петя: Но ты ведь сам курил пару минут назад. Значит, курить можно.</td>
+</tr></table>
+
+        <hr />
+        <footer>
+            <p>&copy; 2016 - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="/Scripts/jquery-3.1.1.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+<script src="/Scripts/respond.js"></script>
+
+    
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Chrome","requestId":"483e9e052fea46fa887fd70c92da56b6"}
+</script>
+<script type="text/javascript" src="http://localhost:50428/e9bfb44758bc428e8349630fb66968ff/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>

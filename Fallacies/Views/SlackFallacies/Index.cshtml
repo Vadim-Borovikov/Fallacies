@@ -1,0 +1,20 @@
+﻿@using Fallacies.Data
+@model IEnumerable<SlackFallacy>
+
+@{
+    ViewBag.Title = "Fallacy Emoji @ Slack";
+}
+
+<br />
+<button onclick="location.href='@Url.Action("FetchDataFromSlack")'">Fetch data from Slack</button>
+<hr />
+<table cols="2">
+    <tr>
+        <th>Emoji</th>
+        <th>Код</th>
+    </tr>
+    @foreach (SlackFallacy fallacy in Model)
+    {
+        @Html.Partial("_SlackFallacyPartial", fallacy)
+    }
+</table>

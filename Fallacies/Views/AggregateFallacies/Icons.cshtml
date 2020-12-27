@@ -1,0 +1,18 @@
+﻿@using Fallacies.Data
+@model IEnumerable<Fallacy>
+
+@{
+    ViewBag.Title = "Icons";
+}
+<br />
+<table cols="3">
+    <tr>
+        <th>Git image</th>
+        <th>Slack image</th>
+        <th>Name</th>
+    </tr>
+    @foreach (Fallacy fallacy in Model.Where(fallacy => !string.IsNullOrWhiteSpace(fallacy.GitImagePathIcon)))
+    {
+        @Html.Partial("_FallacyIconPartial", fallacy)
+    }
+</table>

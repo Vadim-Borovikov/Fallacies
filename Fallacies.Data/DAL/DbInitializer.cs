@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace Model.DAL
+namespace Fallacies.Data.DAL
 {
     public class DbInitializer : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
     {

@@ -1,8 +1,8 @@
-﻿@using Model.Git
-@model IEnumerable<Model.Git.Fallacy>
+﻿@using Fallacies.Data
+@model IEnumerable<GitFallacy>
 
 @{
-    ViewBag.Title = "fallacymania @ Git";
+    ViewBag.Title = "Fallacymania @ Git";
 }
 
 <br />
@@ -17,7 +17,7 @@
         <th>Описание</th>
         <th>Пример(ы)</th>
     </tr>
-    @foreach (Fallacy fallacy in Model)
+    @foreach (GitFallacy fallacy in Model)
     {
         @Html.Partial("_GitFallacyPartial", fallacy)
     }

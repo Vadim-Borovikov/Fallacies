@@ -6,7 +6,17 @@ namespace Fallacies.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return Local();
+        }
+
+        public ActionResult Local()
+        {
+            return RedirectToAction("Index", "LocalFallacies");
+        }
+
+        public ActionResult Slack()
+        {
+            return RedirectToAction("Index", "SlackFallacies");
         }
 
         public ActionResult Git()
@@ -14,11 +24,19 @@ namespace Fallacies.Controllers
             return RedirectToAction("Index", "GitFallacies");
         }
 
-        public ActionResult Contact()
+        public ActionResult Aggregate()
         {
-            ViewBag.Message = "Your contact page.";
+            return RedirectToAction("Index", "AggregateFallacies");
+        }
 
-            return View();
+        public ActionResult Icons()
+        {
+            return RedirectToAction("Icons", "AggregateFallacies");
+        }
+
+        public ActionResult Emoji()
+        {
+            return RedirectToAction("Emoji", "AggregateFallacies");
         }
     }
 }

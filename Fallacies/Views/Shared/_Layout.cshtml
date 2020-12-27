@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Your Logical Fallacyis @ Local", "Local", "Home")</li>
+                    <li>@Html.ActionLink("Fallacy Emoji @ Slack", "Slack", "Home")</li>
+                    <li>@Html.ActionLink("Fallacymania @ Git", "Git", "Home")</li>
+                    <li>@Html.ActionLink("Aggregate", "Aggregate", "Home")</li>
+                    <li>@Html.ActionLink("Icons", "Icons", "Home")</li>
+                    <li>@Html.ActionLink("Emoji", "Emoji", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
